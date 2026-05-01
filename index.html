@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Batista | Técnico em Informática</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root {
+            --primary: #3b82f6;
+        }
+        
+        * {
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+
+        .section {
+            scroll-margin-top: 80px;
+        }
+
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.08) translateY(-2px);
+            background-color: #3b82f6;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.3);
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+    <!-- HEADER / NAV -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-6 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">F</div>
+                    <div>
+                        <span class="font-semibold text-xl tracking-tight heading-font">Felipe Batista</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#inicio" class="nav-link text-zinc-600 hover:text-blue-600 active">Início</a>
+                    <a href="#sobre" class="nav-link text-zinc-600 hover:text-blue-600">Sobre mim</a>
+                    <a href="#habilidades" class="nav-link text-zinc-600 hover:text-blue-600">Habilidades</a>
+                    <a href="#projetos" class="nav-link text-zinc-600 hover:text-blue-600">Projetos</a>
+                    <a href="#contato" class="nav-link text-zinc-600 hover:text-blue-600">Contato</a>
+                </div>
+
+                <a href="#contato" 
+                   class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-2xl text-sm font-medium flex items-center gap-2">
+                    <i class="fas fa-paper-plane"></i>
+                    Fale comigo
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-2xl text-zinc-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="flex flex-col px-6 py-6 gap-4 text-lg font-medium">
+                <a href="#inicio" class="mobile-link py-2">Início</a>
+                <a href="#sobre" class="mobile-link py-2">Sobre mim</a>
+                <a href="#habilidades" class="mobile-link py-2">Habilidades</a>
+                <a href="#projetos" class="mobile-link py-2">Projetos</a>
+                <a href="#contato" class="mobile-link py-2">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO / INÍCIO -->
+    <section id="inicio" class="hero-bg text-white min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-3xl text-sm">
+                        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                        Turma 2025 - IFCE Acaraú
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight heading-font">
+                        Olá, eu sou<br><span class="text-blue-200">Felipe Batista</span>
+                    </h1>
+                    
+                    <p class="text-2xl text-blue-100">
+                        Estudante do Curso Técnico em Informática
+                    </p>
+                    
+                    <p class="text-lg text-blue-100 max-w-lg">
+                        Estou dando meus primeiros passos no mundo da tecnologia, 
+                        aprendendo a criar soluções digitais e entendendo como as coisas funcionam por trás da tela.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projetos" 
+                           class="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-4 rounded-2xl flex items-center gap-3 text-lg">
+                            <i class="fas fa-folder-open"></i>
+                            Ver meus projetos
+                        </a>
+                        <a href="#contato" 
+                           class="border-2 border-white/80 hover:bg-white/10 font-medium px-8 py-4 rounded-2xl flex items-center gap-3 text-lg">
+                            <i class="fas fa-comment-dots"></i>
+                            Fale comigo
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Foto / Ilustração -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-white/10 backdrop-blur-xl rounded-3xl p-4 shadow-2xl">
+                            <div class="w-full h-full bg-zinc-800 rounded-2xl overflow-hidden flex items-center justify-center border border-white/20">
+                                <div class="text-center">
+                                    <i class="fas fa-laptop-code text-8xl text-blue-400 mb-6"></i>
+                                    <p class="text-white text-xl font-medium">Felipe Batista</p>
+                                    <p class="text-blue-300 text-sm mt-1">Técnico em Informática</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-6 -right-6 bg-yellow-400 text-zinc-900 text-xs font-bold px-4 py-1 rounded-2xl rotate-12 shadow-lg">
+                            Aprendendo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center md:flex hidden">
+            <p class="text-sm text-blue-200 mb-2">Role para baixo</p>
+            <i class="fas fa-chevron-down text-2xl text-blue-200 animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="section py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold heading-font mb-4">Sobre mim</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed text-zinc-600 space-y-6">
+                <p>
+                    Meu nome é Felipe Batista Fernandes, sou estudante do curso Técnico em Informática no IFCE campus Acaraú-CE, turma 2025.
+                </p>
+                <p>
+                    Escolhi esse curso porque sempre tive curiosidade sobre como os computadores funcionam e como podemos criar coisas incríveis usando tecnologia. 
+                    Quero entender desde o básico até poder desenvolver soluções que ajudem as pessoas no dia a dia.
+                </p>
+                <p>
+                    Atualmente estou aprendendo os fundamentos da área: lógica de programação, desenvolvimento web, redes de computadores, sistemas operacionais e manutenção de hardware. 
+                    Cada dia descubro algo novo e isso me motiva a continuar estudando.
+                </p>
+                <p>
+                    Meu objetivo é me tornar um profissional competente na área de tecnologia, poder contribuir em projetos reais e continuar aprendendo sempre.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section py-24 bg-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold heading-font mb-4">Habilidades que estou desenvolvendo</h2>
+                <p class="text-zinc-600 max-w-md mx-auto">Conhecimentos que venho adquirindo durante o curso técnico</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">HTML5</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-paint-brush text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">CSS3</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-lightbulb text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">Lógica de Programação</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-terminal text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">Portugol</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="font-semibold">JavaScript Básico</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-network-wired text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">Redes de Computadores</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fab fa-linux text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">Linux</h3>
+                </div>
+                <div class="skill-badge bg-white p-6 rounded-3xl shadow-sm flex flex-col items-center text-center border border-zinc-100">
+                    <i class="fas fa-tools text-4xl text-amber-600 mb-4"></i>
+                    <h3 class="font-semibold">Manutenção de Computadores</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold heading-font mb-4">Meus primeiros projetos</h2>
+                <p class="text-zinc-600">Atividades e projetos desenvolvidos durante o curso</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="card-hover bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-globe text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-3">Meu Primeiro Site em HTML e CSS</h3>
+                        <p class="text-zinc-600 text-[15px] leading-relaxed mb-6">
+                            Desenvolvimento de uma página web simples para praticar a estrutura HTML, 
+                            estilização com CSS, uso de cores, fontes e organização de layout.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">HTML</span>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                        <button onclick="alert('Este é o meu primeiro projeto! Em breve terei um link para visualizá-lo.')"
+                                class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
+                            Ver detalhes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="card-hover bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-code text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-3">Projetos Desenvolvidos</h3>
+                        <p class="text-zinc-600 text-[15px] leading-relaxed mb-6">
+                            Projetos feitos por mim.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Projetos</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Lógica</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Automação</span>
+                        </div>
+                        <button onclick="alert('Projeto de lógica de programação realizado em sala de aula.')"
+                                class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
+                            Ver detalhes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <div class="card-hover bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center">
+                        <i class="fas fa-server text-7xl text-white/80"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-xl mb-3">Configuração de Ambiente Linux</h3>
+                        <p class="text-zinc-600 text-[15px] leading-relaxed mb-6">
+                            Atividade prática de instalação e configuração básica de sistema operacional Linux, 
+                            comandos no terminal e organização de arquivos.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Linux</span>
+                            <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Terminal</span>
+                        </div>
+                        <button onclick="alert('Atividade prática de Sistemas Operacionais.')"
+                                class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
+                            Ver detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE ESTOU APRENDENDO -->
+    <section class="section py-20 bg-zinc-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold heading-font mb-12">O que estou aprendendo no curso</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl">
+                    <div class="text-blue-400 text-5xl mb-6">🌐</div>
+                    <h3 class="text-xl font-semibold mb-3">Desenvolvimento Web</h3>
+                    <p class="text-zinc-300">Criando minhas primeiras páginas web com HTML e CSS</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl">
+                    <div class="text-emerald-400 text-5xl mb-6">🧠</div>
+                    <h3 class="text-xl font-semibold mb-3">Lógica de Programação</h3>
+                    <p class="text-zinc-300">Desenvolvendo o pensamento lógico através de algoritmos</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl">
+                    <div class="text-amber-400 text-5xl mb-6">🔧</div>
+                    <h3 class="text-xl font-semibold mb-3">Hardware e Redes</h3>
+                    <p class="text-zinc-300">Entendendo o funcionamento de computadores e redes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold heading-font mb-4">Vamos conversar?</h2>
+                <p class="text-zinc-600">Estou aberto a trocar ideias e aprender mais sobre tecnologia</p>
+            </div>
+            
+            <div class="bg-zinc-50 border border-zinc-200 rounded-3xl p-12">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-semibold text-2xl mb-8">Entre em contato</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600">
+                                    ✉️
+                                </div>
+                                <div>
+                                    <p class="text-sm text-zinc-500">Email</p>
+                                    <a href="mailto:felipeb.fnandes@gmail.com" 
+                                       class="text-blue-600 hover:underline font-medium">felipeb.fnandes@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-2xl text-green-600">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-zinc-500">WhatsApp</p>
+                                    <a href="https://wa.me/5588981713664" target="_blank"
+                                       class="text-green-600 hover:underline font-medium">(88) 9 8171-3664</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-zinc-100 rounded-2xl flex items-center justify-center text-2xl">
+                                    📍
+                                </div>
+                                <div>
+                                    <p class="text-sm text-zinc-500">Localização</p>
+                                    <p class="font-medium">Acaraú - CE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border">
+                        <p class="text-zinc-600 leading-relaxed">
+                            Estou em processo de aprendizado e sempre disposto a novos desafios, 
+                            trocas de conhecimento e oportunidades na área de tecnologia.
+                        </p>
+                        <div class="mt-10 pt-10 border-t text-xs text-zinc-500">
+                            IFCE - Instituto Federal do Ceará<br>
+                            Campus Acaraú • Turma 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-900 text-zinc-400 py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <p class="font-medium text-white">Felipe Batista Fernandes</p>
+                    <p class="text-sm">Técnico em Informática • IFCE Acaraú-CE • 2025</p>
+                </div>
+                
+                <div class="text-center text-xs">
+                    <p>Site desenvolvido como atividade prática da disciplina de Desenvolvimento Web</p>
+                    <p class="mt-1">© 2026 Felipe Batista. Todos os direitos reservados.</p>
+                </div>
+                
+                <div class="flex gap-6 text-2xl">
+                    <a href="#" class="hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" 
+            class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg z-50 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Tailwind script already included via CDN
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = mobileBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Simple animation for skill badges on scroll
+        function animateOnScroll() {
+            const badges = document.querySelectorAll('.skill-badge');
+            badges.forEach((badge, index) => {
+                setTimeout(() => {
+                    badge.style.opacity = '1';
+                }, index * 100);
+            });
+        }
+        
+        // Trigger animation when skills section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateOnScroll();
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        const skillsSection = document.getElementById('habilidades');
+        if (skillsSection) observer.observe(skillsSection);
+        
+        // Keyboard shortcut: Press "C" to focus contact
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'c') {
+                document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        
+        console.log('%c✅ Site de Felipe Batista carregado com sucesso!', 'color: #3b82f6; font-weight: bold;');
+    </script>
+</body>
+</html>
