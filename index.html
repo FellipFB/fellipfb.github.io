@@ -72,6 +72,18 @@
             color: white;
             box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.3);
         }
+
+        /* Melhoria para mobile */
+        @media (max-width: 768px) {
+            .max-w-6xl, .max-w-5xl, .max-w-4xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            a {
+                word-break: break-all;
+            }
+        }
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-800">
@@ -139,8 +151,7 @@
                     </p>
                     
                     <p class="text-lg text-blue-100 max-w-lg">
-                        Estou dando meus primeiros passos no mundo da tecnologia, 
-                        aprendendo a criar soluções digitais e entendendo como as coisas funcionam por trás da tela.
+                        Criando soluções digitais e aprofundando meu entendimento de como a tecnologia funciona.
                     </p>
                     
                     <div class="flex flex-wrap gap-4">
@@ -199,12 +210,10 @@
                     Meu nome é Felipe Batista Fernandes, sou estudante do curso Técnico em Informática no IFCE campus Acaraú-CE, turma 2025.
                 </p>
                 <p>
-                    Escolhi esse curso porque sempre tive curiosidade sobre como os computadores funcionam e como podemos criar coisas incríveis usando tecnologia. 
-                    Quero entender desde o básico até poder desenvolver soluções que ajudem as pessoas no dia a dia.
+                    Escolhi esse curso porque sempre tive curiosidade sobre como os computadores funcionam e como podemos criar coisas usando tecnologia.
                 </p>
                 <p>
-                    Atualmente estou aprendendo os fundamentos da área: lógica de programação, desenvolvimento web, redes de computadores, sistemas operacionais e manutenção de hardware. 
-                    Cada dia descubro algo novo e isso me motiva a continuar estudando.
+                    Atualmente estou aprendendo os fundamentos da área: lógica de programação, desenvolvimento web, redes de computadores, sistemas operacionais e manutenção de hardware.
                 </p>
                 <p>
                     Meu objetivo é me tornar um profissional competente na área de tecnologia, poder contribuir em projetos reais e continuar aprendendo sempre.
@@ -282,7 +291,7 @@
                             <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">HTML</span>
                             <span class="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">CSS</span>
                         </div>
-                        <button onclick="alert('Este é o meu primeiro projeto! Em breve terei um link para visualizá-lo.')"
+                        <button onclick="emBreve()"
                                 class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
                             Ver detalhes
                         </button>
@@ -304,7 +313,7 @@
                             <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Lógica</span>
                             <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">Automação</span>
                         </div>
-                        <button onclick="alert('Projeto de lógica de programação realizado em sala de aula.')"
+                        <button onclick="emBreve()"
                                 class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
                             Ver detalhes
                         </button>
@@ -326,7 +335,7 @@
                             <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Linux</span>
                             <span class="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Terminal</span>
                         </div>
-                        <button onclick="alert('Atividade prática de Sistemas Operacionais.')"
+                        <button onclick="emBreve()"
                                 class="w-full bg-zinc-900 hover:bg-black text-white py-3.5 rounded-2xl text-sm font-medium">
                             Ver detalhes
                         </button>
@@ -368,36 +377,42 @@
                 <p class="text-zinc-600">Estou aberto a trocar ideias e aprender mais sobre tecnologia</p>
             </div>
             
-            <div class="bg-zinc-50 border border-zinc-200 rounded-3xl p-12">
-                <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-zinc-50 border border-zinc-200 rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-10">
+                    
+                    <!-- Coluna de Contatos -->
                     <div>
                         <h3 class="font-semibold text-2xl mb-8">Entre em contato</h3>
                         
                         <div class="space-y-8">
                             <div class="flex gap-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600">
+                                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl text-blue-600 flex-shrink-0">
                                     ✉️
                                 </div>
-                                <div>
+                                <div class="min-w-0"> <!-- importante para evitar overflow -->
                                     <p class="text-sm text-zinc-500">Email</p>
                                     <a href="mailto:felipeb.fnandes@gmail.com" 
-                                       class="text-blue-600 hover:underline font-medium">felipeb.fnandes@gmail.com</a>
+                                       class="text-blue-600 hover:underline font-medium break-all">
+                                        felipeb.fnandes@gmail.com
+                                    </a>
                                 </div>
                             </div>
                             
                             <div class="flex gap-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-2xl text-green-600">
+                                <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-2xl text-green-600 flex-shrink-0">
                                     <i class="fab fa-whatsapp"></i>
                                 </div>
                                 <div>
                                     <p class="text-sm text-zinc-500">WhatsApp</p>
                                     <a href="https://wa.me/5588981713664" target="_blank"
-                                       class="text-green-600 hover:underline font-medium">(88) 9 8171-3664</a>
+                                       class="text-green-600 hover:underline font-medium">
+                                        (88) 9 8171-3664
+                                    </a>
                                 </div>
                             </div>
                             
                             <div class="flex gap-4">
-                                <div class="w-12 h-12 bg-zinc-100 rounded-2xl flex items-center justify-center text-2xl">
+                                <div class="w-12 h-12 bg-zinc-100 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
                                     📍
                                 </div>
                                 <div>
@@ -408,7 +423,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border">
+                    <!-- Card lateral -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border h-fit">
                         <p class="text-zinc-600 leading-relaxed">
                             Estou em processo de aprendizado e sempre disposto a novos desafios, 
                             trocas de conhecimento e oportunidades na área de tecnologia.
@@ -439,7 +455,7 @@
                 
                 <div class="flex gap-6 text-2xl">
                     <a href="https://github.com/fellipfb" class="hover:text-white"><i class="fab fa-github"></i></a>
-                    <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a onclick="alertLinkedIn()" href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -576,5 +592,16 @@
         
         console.log('%c✅ Site de Felipe Batista carregado com sucesso!', 'color: #3b82f6; font-weight: bold;');
     </script>
+    
+    <script>
+    // Funções de alerta temporárias
+    function emBreve() {
+        alert("🚧 Não está pronto ainda...");
+    }
+
+    function alertLinkedIn() {
+        alert("🚧 Calma ae patrão LinkedIn ainda não configurado!\nEm breve, quem sabe!");
+    }
+</script>
 </body>
 </html>
