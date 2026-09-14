@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Felipe Batista Fernandes — Técnico em Informática · Automação & Redes">
+  <meta name="author" content="Felipe Batista Fernandes">
+  <title>Felipe Batista Fernandes</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip">Pular para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Início">
+        <span class="logo__name">Felipe Batista</span>
+        <span class="logo__role" data-i18n="role">Técnico em Informática</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+          <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+          <li><a href="#formacao" data-i18n="nav.education">Formação</a></li>
+          <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-switcher" role="group" aria-label="Selecionar idioma">
+          <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="nav-mobile" class="nav-mobile" hidden>
+      <ul>
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#formacao" data-i18n="nav.education">Formação</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="inicio" class="hero">
+      <div class="container">
+        <p class="hero__label" data-i18n="hero.label">Técnico em Informática · Automação & Redes</p>
+        <h1 class="hero__title">Felipe Batista Fernandes</h1>
+        <p class="hero__desc" data-i18n="hero.desc">
+          Formado pelo IFCE Campus Acaraú. Trabalho com programação, redes, Linux e automação.
+          Gosto de entender como as coisas funcionam e construir ferramentas úteis.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary" data-i18n="hero.ctaProjects">Ver projetos</a>
+          <a href="assets/resume/Felipe_Batista_Fernandes_Curriculo.pdf" class="btn btn--secondary" download data-i18n="hero.ctaResume">
+            Baixar currículo (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="about.title">Sobre</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p data-i18n="about.p1">
+              Sou Técnico em Informática pelo IFCE Campus Acaraú. Durante o curso e o estágio no laboratório
+              desenvolvi scripts de automação, suporte técnico e projetos próprios focados em redes e ferramentas de linha de comando.
+            </p>
+            <p data-i18n="about.p2">
+              Tenho interesse especial em redes, Linux, automação, bancos de dados, APIs e segurança da informação.
+              Prefiro aprender na prática e resolver problemas reais.
+            </p>
+          </div>
+          <aside class="about__aside">
+            <div class="info-card">
+              <h3 data-i18n="about.location">Localização</h3>
+              <p>Acaraú — CE, Brasil</p>
+            </div>
+            <div class="info-card">
+              <h3 data-i18n="about.languages">Idiomas</h3>
+              <ul>
+                <li data-i18n="about.lang.pt">Português — Nativo</li>
+                <li data-i18n="about.lang.en">Inglês — Básico</li>
+                <li data-i18n="about.lang.es">Espanhol — Básico</li>
+                <li data-i18n="about.lang.libras">Libras — Básico</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" data-i18n="skills.title">Habilidades</h2>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 data-i18n="skills.langs">Linguagens</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>PHP</li>
+              <li>JavaScript</li>
+              <li>Java</li>
+              <li>Kotlin</li>
+              <li>Go</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skills.frameworks">Frameworks</h3>
+            <ul class="tags">
+              <li>Flask</li>
+              <li>Django</li>
+              <li>Laravel</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 data-i18n="skills.tools">Ferramentas</h3>
+            <ul class="tags">
+              <li>Git / GitHub</li>
+              <li>Linux</li>
+              <li>SSH</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-group skill-group--highlight">
+            <h3 data-i18n="skills.networks">Redes & Automação</h3>
+            <ul class="tags">
+              <li>TCP/IP</li>
+              <li>DNS</li>
+              <li>DHCP</li>
+              <li>Scripts</li>
+              <li>Scanner de rede</li>
+              <li>Automação</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="projects.title">Projetos</h2>
+        <p class="section__intro" data-i18n="projects.intro">
+          Ferramentas e experimentos que construí para aprender e resolver problemas reais.
+        </p>
+
+        <!-- 
+          SISTEMA MODULAR DE PROJETOS
+          Os projetos são renderizados a partir do array em js/projects.js
+          Para adicionar um novo: copie o objeto de exemplo e preencha os campos.
+        -->
+        <div id="projects-list" class="projects-list" role="list">
+        </div>
+      </div>
+    </section>
+
+    <section id="formacao" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" data-i18n="education.title">Formação</h2>
+        <div class="education">
+          <article class="education__item">
+            <h3 data-i18n="education.degree">Técnico em Informática</h3>
+            <p class="education__school">IFCE Campus Acaraú</p>
+            <p class="education__meta" data-i18n="education.meta">Concluído em 2026 · Acaraú, CE, Brasil</p>
+            <ul class="education__topics">
+              <li data-i18n="education.topic1">Redes de computadores</li>
+              <li data-i18n="education.topic2">Administração de redes</li>
+              <li data-i18n="education.topic3">Arquitetura, montagem e manutenção de computadores</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="experience.title">Experiência</h2>
+        <div class="experience-list">
+          <article class="experience__item">
+            <h3 data-i18n="experience.job1.title">Estagiário de TI — Laboratório IFCE Campus Acaraú</h3>
+            <p class="experience__meta" data-i18n="experience.job1.meta">2024 – início de 2025 · Acaraú, CE</p>
+            <ul>
+              <li data-i18n="experience.job1.b1">Desenvolveu scripts de automação para rotinas do laboratório.</li>
+              <li data-i18n="experience.job1.b2">Apoiou a equipe de TI em tarefas de suporte técnico.</li>
+            </ul>
+          </article>
+          <article class="experience__item">
+            <h3 data-i18n="experience.job2.title">Freelancer — Desenvolvimento de Bots de Automação</h3>
+            <p class="experience__meta" data-i18n="experience.job2.meta">Remoto</p>
+            <ul>
+              <li data-i18n="experience.job2.b1">Desenvolveu bots de automação sob demanda para clientes independentes.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" data-i18n="contact.title">Contato</h2>
+        <p class="section__intro" data-i18n="contact.intro">
+          Aberto a conversas sobre tecnologia, projetos e oportunidades.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.email">E-mail</span>
+            <a href="mailto:felipeb.fnandes@gmail.com">felipeb.fnandes@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.phone">Telefone / WhatsApp</span>
+            <a href="https://wa.me/5588981713664">+55 (88) 98171-3664</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/FellipFB" target="_blank" rel="noopener noreferrer">github.com/FellipFB</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/felipe-fernandes-a744012a3" target="_blank" rel="noopener noreferrer">linkedin.com/in/felipe-fernandes-a744012a3</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact.location">Local</span>
+            <span>Acaraú — CE, Brasil</span>
+          </div>
+        </div>
+
+        <div class="contact__resume">
+          <a href="assets/resume/Felipe_Batista_Fernandes_Curriculo.pdf" class="btn btn--primary" download data-i18n="contact.resume">
+            Baixar currículo (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Felipe Batista Fernandes · <span data-i18n="footer.role">Técnico em Informática</span></p>
+      <p class="footer__links">
+        <a href="https://github.com/FellipFB" target="_blank" rel="noopener noreferrer">GitHub</a>
+        ·
+        <a href="mailto:felipeb.fnandes@gmail.com">E-mail</a>
+      </p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" hidden>
+    ↑
+  </button>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+                                                          
